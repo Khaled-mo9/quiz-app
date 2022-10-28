@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+:root {
+    --main-color: #5e72eb;
+    --sec-color: #080742;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    color: white;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.quiz-app {
+    background-color: var(--sec-color);
+    width: fit-content;
+    padding: 20px;
+    width: 800px;
+}
+
+.quiz-app .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.quiz-app .quiz-questions h2 {
+    background-color: var(--main-color);
+    padding: 10px;
+    color: black;
+}
+
+.quiz-app .quiz-questions .answers .answer {
+    margin-bottom: 15px;
+}
+
+.quiz-app .quiz-questions .answers .answer:not(:last-child) {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.quiz-app .quiz-questions .answers .answer input[type="radio"]:checked {
+    accent-color: var(--main-color);
+}
+
+.quiz-app .quiz-questions .answers .answer input[type="radio"]:checked+label {
+    color: var(--main-color);
+}
+
+.quiz-app .quiz-questions .answers .answer label {
+    margin-left: 10px;
+    position: relative;
+    top: -2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.quiz-app  button {
+    width: 100%;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.quiz-app .bullets {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quiz-app .bullets ul {
+    display: flex;
+    padding: 0;
+}
+
+.quiz-app .bullets ul li {
+    width: 14px;
+    height: 14px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.score {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--main-color);
+    display: none;
+}
+
+.score span {
+    font-size: 18px;
+}
+
+.quiz-app .bullets ul li.active {
+    background-color: var(--main-color);
+}
